@@ -1,8 +1,6 @@
 # python3
 
 def read_input():
-    global pattern
-    global search
     type = input()
     if "I" in type:
         pattern = input()
@@ -17,9 +15,6 @@ def read_input():
             pass
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    
-    print(pattern)
-    print(search)
     
     # after input type choice
     # read two lines 
