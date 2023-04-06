@@ -1,6 +1,8 @@
 # python3
 
 def read_input():
+    global pattern
+    global search
     type = input()
     if "I" in type:
         pattern = input()
