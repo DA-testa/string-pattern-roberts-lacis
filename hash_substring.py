@@ -1,6 +1,15 @@
 # python3
 
 def read_input():
+    type = input()
+    if "I" in type:
+        pattern = input()
+        search = input()
+    else:
+        file = "tests/" + input()
+        with open(file, 'r', encoding="utf-8") as f:
+            pattern = f.readline().strip()
+            search = f.readline().strip()
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
@@ -13,17 +22,28 @@ def read_input():
     # return both lines in one return
     
     # this is the sample return, notice the rstrip function
-    return (input().rstrip(), input().rstrip())
+    return (pattern, search)
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
     print(' '.join(map(str, output)))
 
 def get_occurrences(pattern, text):
+    len = len(pattern)
+    indexes = []
+    for i in range(len(text)):
+        if text[i] == pattern[0] and len + i < len(text):
+            found = False
+            for j in range(len):
+                if text[i+j] == pattern[j]:
+                    found = True
+                if found:
+                    indexes.add(i)
+            
     # this function should find the occurances using Rabin Karp alghoritm 
 
     # and return an iterable variable
-    return [0]
+    return indexes
 
 
 # this part launches the functions
