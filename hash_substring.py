@@ -34,10 +34,10 @@ def get_occurrences(pattern, text):
     indexes = []
     for i in range(len(text)):
         if text[i] == pattern[0] and len(pattern) + i < len(text):
-            found = False
+            found = True
             for j in range(len(pattern)):
-                if text[i+j] == pattern[j]:
-                    found = True
+                if text[i+j] != pattern[j]:
+                    found = False
             if found:
                 indexes.append(i)
             
