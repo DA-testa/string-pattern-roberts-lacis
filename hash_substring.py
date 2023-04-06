@@ -37,7 +37,7 @@ def get_occurrences(pattern, text):
                 if text[i+j] == pattern[j]:
                     found = True
                 if found:
-                    indexes.add(i)
+                    indexes.append(i)
             
     # this function should find the occurances using Rabin Karp alghoritm 
 
