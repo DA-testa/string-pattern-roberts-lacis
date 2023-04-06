@@ -6,10 +6,13 @@ def read_input():
         pattern = input()
         search = input()
     else:
-        file = "tests/" + input()
-        with open(file, 'r', encoding="utf-8") as f:
-            pattern = f.readline().strip()
-            search = f.readline().strip()
+        try:
+            file = "tests/" + input()
+            with open(file, 'r', encoding="utf-8") as f:
+                pattern = f.readline().strip()
+                search = f.readline().strip()
+        except EOFError as e:
+            pass
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
@@ -33,7 +36,7 @@ def print_occurrences(output):
 def get_occurrences(pattern, text):
     indexes = []
     for i in range(len(text)):
-        if text[i] == pattern[0] and len(pattern) + i < len(text):
+        if text[i] == pattern[0] and len(pattern) + i <= len(text):
             found = True
             for j in range(len(pattern)):
                 if text[i+j] != pattern[j]:
