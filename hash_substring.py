@@ -3,16 +3,17 @@
 def read_input():
     type = input()
     if "I" in type:
-        pattern = input()
+        patt = input()
         search = input()
     else:
         try:
             file = "tests/" + input()
             with open(file, 'r', encoding="utf-8") as f:
-                pattern = f.readline().strip()
-                search = f.readline().strip()
+                patt = f.readline()
+                search = f.readline()
         except EOFError as e:
             pass
+
     # this function needs to aquire input both from keyboard and file
     # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
     
@@ -24,7 +25,7 @@ def read_input():
     # return both lines in one return
     
     # this is the sample return, notice the rstrip function
-    return (pattern, search)
+    return (patt.rstrip(), search.rstrip())
 
 def print_occurrences(output):
     # this function should control output, it doesn't need any return
