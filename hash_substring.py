@@ -1,6 +1,8 @@
 # python3
 
 def read_input():
+    patt = ""
+    search = ""
     type = input()
     if "I" in type:
         patt = input()
