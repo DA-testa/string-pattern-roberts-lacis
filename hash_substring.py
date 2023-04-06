@@ -11,8 +11,7 @@ def read_input():
         try:
             file = "tests/" + input()
             with open(file, 'r', encoding="utf-8") as f:
-                patt = f.readline()
-                search = f.readline()
+                patt = f.read()
         except EOFError as e:
             pass
 
