@@ -29,12 +29,11 @@ def print_occurrences(output):
     print(' '.join(map(str, output)))
 
 def get_occurrences(pattern, text):
-    len = len(pattern)
     indexes = []
     for i in range(len(text)):
-        if text[i] == pattern[0] and len + i < len(text):
+        if text[i] == pattern[0] and len(pattern) + i < len(text):
             found = False
-            for j in range(len):
+            for j in range(len(pattern)):
                 if text[i+j] == pattern[j]:
                     found = True
                 if found:
