@@ -7,8 +7,7 @@ def read_input():
         patt = input()
         search = input()
     else:
-        file = "tests/" + input()
-        print(exists(file))
+        print(type)
 
     #print("Pattern:"+patt)
     #print("Search:"+search)
