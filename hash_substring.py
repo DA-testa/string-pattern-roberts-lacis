@@ -2,16 +2,11 @@
 from os.path import exists
 
 def read_input():
-    type = input()
-    if "I" in type:
-        patt = input()
-        search = input()
-    else:
-        try:
-            while True:
-                print(input())
-        except EOFError as e:
-            pass
+    try:
+        while True:
+            print(input())
+    except EOFError as e:
+        pass
 
     #print("Pattern:"+patt)
     #print("Search:"+search)
