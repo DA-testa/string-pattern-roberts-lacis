@@ -1,17 +1,16 @@
 # python3
 
 def read_input():
-    patt = ""
-    search = ""
     type = input()
     if "I" in type:
         patt = input()
         search = input()
     else:
         try:
-            file = "tests/" + input()
+            file = "tests/" + input().strip()
             with open(file, 'r', encoding="utf-8") as f:
-                patt = f.read()
+                patt = f.readline()
+                search = f.readline()
         except EOFError as e:
             pass
 
