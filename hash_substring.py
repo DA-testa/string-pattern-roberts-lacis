@@ -1,4 +1,5 @@
 # python3
+from os.path import exists
 
 def read_input():
     type = input()
@@ -7,7 +8,8 @@ def read_input():
         search = input()
     else:
         try:
-            file = "tests/" + input().strip()
+            file = "tests/" + input()
+            print(exists(file))
             with open(file, 'r', encoding="utf-8") as f:
                 patt = f.readline()
                 search = f.readline()
