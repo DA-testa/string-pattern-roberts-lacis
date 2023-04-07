@@ -8,6 +8,7 @@ def read_input():
         search = input()
     else:
         print(type)
+        print(input())
 
     #print("Pattern:"+patt)
     #print("Search:"+search)
