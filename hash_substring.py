@@ -7,9 +7,9 @@ def read_input():
         patt = input()
         search = input()
     else:
+        file = "tests/" + input()
+        print(exists(file))
         try:
-            file = "tests/" + input()
-            print(exists(file))
             with open(file, 'r', encoding="utf-8") as f:
                 patt = f.readline()
                 search = f.readline()
