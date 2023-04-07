@@ -9,12 +9,6 @@ def read_input():
     else:
         file = "tests/" + input()
         print(exists(file))
-        try:
-            with open(file, 'r', encoding="utf-8") as f:
-                patt = f.readline()
-                search = f.readline()
-        except EOFError as e:
-            pass
 
     #print("Pattern:"+patt)
     #print("Search:"+search)
