@@ -7,8 +7,11 @@ def read_input():
         patt = input()
         search = input()
     else:
-        print(type)
-        print(input())
+        try:
+            while True:
+                print(input())
+        except EOFError as e:
+            pass
 
     #print("Pattern:"+patt)
     #print("Search:"+search)
